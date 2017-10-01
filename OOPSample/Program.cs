@@ -1,4 +1,5 @@
-﻿using OOPSample.Sample2;
+﻿using System;
+using OOPSample.Sample3;
 
 namespace OOPSample
 {
@@ -6,7 +7,14 @@ namespace OOPSample
     {
         static void Main(string[] args)
         {
-            SampleRunner.Run();
+            try
+            {
+                SampleRunner.Run();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }

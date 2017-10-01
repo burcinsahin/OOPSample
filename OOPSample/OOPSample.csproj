@@ -61,6 +61,8 @@
     <Compile Include="Sample2\Villager.cs" />
     <Compile Include="Sample2\World.cs" />
     <Compile Include="Sample0\Student.cs" />
+    <Compile Include="Sample3\Matrix.cs" />
+    <Compile Include="Sample3\SampleRunner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
