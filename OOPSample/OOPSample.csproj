@@ -63,6 +63,14 @@
     <Compile Include="Sample0\Student.cs" />
     <Compile Include="Sample3\Matrix.cs" />
     <Compile Include="Sample3\SampleRunner.cs" />
+    <Compile Include="Sample4\ICarnivorous.cs" />
+    <Compile Include="Sample4\IOrganism.cs" />
+    <Compile Include="Sample4\IPlant.cs" />
+    <Compile Include="Sample4\Organism.cs" />
+    <Compile Include="Sample4\Carnivorous.cs" />
+    <Compile Include="Sample4\Nepenthes.cs" />
+    <Compile Include="Sample4\Plant.cs" />
+    <Compile Include="Sample4\SampleRunner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
