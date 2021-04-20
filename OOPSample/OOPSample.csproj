@@ -71,10 +71,24 @@
     <Compile Include="Sample4\Nepenthes.cs" />
     <Compile Include="Sample4\Plant.cs" />
     <Compile Include="Sample4\SampleRunner.cs" />
+    <Compile Include="Sample5\Circle.cs" />
+    <Compile Include="Sample5\DependencyResolver.cs" />
+    <Compile Include="Sample5\IHasEdges.cs" />
+    <Compile Include="Sample5\IShape.cs" />
+    <Compile Include="Sample5\IShapePrinter.cs" />
+    <Compile Include="Sample5\Rectangle.cs" />
+    <Compile Include="Sample5\SampleRunner.cs" />
+    <Compile Include="Sample5\Shape.cs" />
+    <Compile Include="Sample5\ShapeConsolePrinter.cs" />
+    <Compile Include="Sample5\ShapeFilePrinter.cs" />
+    <Compile Include="Sample5\ShapePrinter.cs" />
+    <Compile Include="Sample5\Square.cs" />
+    <Compile Include="Sample5\Triangle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

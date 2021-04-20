@@ -1,5 +1,5 @@
 ﻿using System;
-using OOPSample.Sample3;
+using OOPSample.Sample5;
 
 namespace OOPSample
 {
@@ -14,6 +14,10 @@ namespace OOPSample
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                Console.Read();
             }
         }
     }
