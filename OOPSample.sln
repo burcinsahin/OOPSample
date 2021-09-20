@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31613.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOPSample", "OOPSample\OOPSample.csproj", "{8076D971-A774-4BB7-9169-971D4F6B9306}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmWorkshop", "AlgorithmWorkshop\AlgorithmWorkshop.csproj", "{08AFC019-E1EA-4010-A455-78ABA9F63E94}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +17,15 @@ Global
 		{8076D971-A774-4BB7-9169-971D4F6B9306}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8076D971-A774-4BB7-9169-971D4F6B9306}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8076D971-A774-4BB7-9169-971D4F6B9306}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08AFC019-E1EA-4010-A455-78ABA9F63E94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08AFC019-E1EA-4010-A455-78ABA9F63E94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08AFC019-E1EA-4010-A455-78ABA9F63E94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08AFC019-E1EA-4010-A455-78ABA9F63E94}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {14668117-C2E6-45D5-9DA0-6D2C079D9CC8}
 	EndGlobalSection
 EndGlobal
