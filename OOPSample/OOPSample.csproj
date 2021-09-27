@@ -84,6 +84,11 @@
     <Compile Include="Sample5\ShapePrinter.cs" />
     <Compile Include="Sample5\Square.cs" />
     <Compile Include="Sample5\Triangle.cs" />
+    <Compile Include="Sample6\FixedQueue.cs" />
+    <Compile Include="Sample6\IQueue.cs" />
+    <Compile Include="Sample6\Node.cs" />
+    <Compile Include="Sample6\Queue.cs" />
+    <Compile Include="Sample6\SampleRunner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

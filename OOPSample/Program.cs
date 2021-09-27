@@ -1,5 +1,5 @@
 ﻿using System;
-using OOPSample.Sample5;
+using OOPSample.Sample6;
 
 namespace OOPSample
 {
@@ -9,14 +9,16 @@ namespace OOPSample
         {
             try
             {
+                Console.WriteLine("Ser Arthur Dayne says 'Now it begins.'\n");
                 SampleRunner.Run();
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine($"Jon Snow says we have an issue: {ex.Message}\n");
             }
             finally
             {
+                Console.WriteLine("Ned Stark says 'Now it ends.'");
                 Console.Read();
             }
         }
