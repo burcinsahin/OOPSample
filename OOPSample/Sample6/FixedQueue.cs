@@ -2,16 +2,16 @@
 
 namespace OOPSample.Sample6
 {
-    internal class FixedQueue<T> : IQueue<T> where T : struct
+    public class FixedQueue<T> : IQueue<T> 
     {
-        private readonly T[] _queueArr;
+        private readonly T[] _queue;
         private bool _isFull;
         private int _first;
         private int _last;
 
         public FixedQueue(int size)
         {
-            _queueArr = new T[size];
+            _queue = new T[size];
             _isFull = false;
         }
 
@@ -20,9 +20,9 @@ namespace OOPSample.Sample6
             if (!_isFull && _first == _last)
                 throw new NotSupportedException("Queue is empty!");
 
-            var value = _queueArr[_first];
+            var value = _queue[_first];
             _first++;
-            _first %= _queueArr.Length;
+            _first %= _queue.Length;
             _isFull = false;
             return value;
         }
@@ -31,9 +31,9 @@ namespace OOPSample.Sample6
         {
             if (_isFull)
                 throw new NotSupportedException("Queue is full!");
-            _queueArr[_last] = value;
+            _queue[_last] = value;
             _last++;
-            _last %= _queueArr.Length;
+            _last %= _queue.Length;
 
             if (_last == _first)
                 _isFull = true;
@@ -47,9 +47,9 @@ namespace OOPSample.Sample6
             var index = _first;
             do
             {
-                str += $"{_queueArr[index]}, ";
+                str += $"{_queue[index]}, ";
                 index++;
-                index %= _queueArr.Length;
+                index %= _queue.Length;
             } while (index != _last);
             return str.Trim().Trim(',');
         }

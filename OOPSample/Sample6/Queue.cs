@@ -2,9 +2,7 @@
 
 namespace OOPSample.Sample6
 {
-
     public class Queue<T> : IQueue<T>
-        where T : struct
     {
         private Node<T> _first;
         private Node<T> _last;

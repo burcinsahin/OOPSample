@@ -1,6 +1,6 @@
 ﻿namespace OOPSample.Sample6
 {
-    internal interface IQueue<T> where T : struct
+    public interface IQueue<T>
     {
         T Dequeue();
         void Enqueue(T value);
