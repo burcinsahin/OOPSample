@@ -1,4 +1,4 @@
-﻿using System.Diagnostics;
+﻿using System;
 
 namespace OOPSample.Sample4
 {
@@ -6,7 +6,7 @@ namespace OOPSample.Sample4
     {
         public void Feed()
         {
-            Debug.WriteLine("Eating another organism...");
+            Console.WriteLine("Eating another organism...");
         }
     }
 }

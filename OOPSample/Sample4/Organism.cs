@@ -1,4 +1,4 @@
-﻿using System.Diagnostics;
+﻿using System;
 
 namespace OOPSample.Sample4
 {
@@ -6,7 +6,7 @@ namespace OOPSample.Sample4
     {
         public virtual void Feed()
         {
-            Debug.WriteLine("Feeding...");
+            Console.WriteLine("Feeding...");
         }
     }
 }

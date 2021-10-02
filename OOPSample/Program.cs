@@ -1,5 +1,4 @@
 ﻿using System;
-using OOPSample.Sample6;
 
 namespace OOPSample
 {
@@ -9,16 +8,37 @@ namespace OOPSample
         {
             try
             {
-                Console.WriteLine("Ser Arthur Dayne says 'Now it begins.'\n");
-                SampleRunner.Run();
+                Console.WriteLine("Now it begins.\n");
+                Console.WriteLine("Type Sample No:");
+                string number = Console.ReadLine();
+                switch (number)
+                {
+                    case "2":
+                        Sample2.SampleRunner.Run();
+                        break;
+                    case "3":
+                        Sample3.SampleRunner.Run();
+                        break;
+                    case "4":
+                        Sample4.SampleRunner.Run();
+                        break;
+                    case "5":
+                        Sample5.SampleRunner.Run();
+                        break;
+                    case "6":
+                        Sample6.SampleRunner.Run();
+                        break;
+                    default:
+                        throw new NotSupportedException();
+                }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Jon Snow says we have an issue: {ex.Message}\n");
+                Console.WriteLine($"We have an issue: {ex.Message}\n");
             }
             finally
             {
-                Console.WriteLine("Ned Stark says 'Now it ends.'");
+                Console.WriteLine("Now it ends.");
                 Console.Read();
             }
         }

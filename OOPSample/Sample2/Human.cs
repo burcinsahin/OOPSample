@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System;
+using System.Collections.Generic;
 
 namespace OOPSample.Sample2
 {
@@ -24,10 +24,10 @@ namespace OOPSample.Sample2
 
         public void PokeAnimal()
         {
-            Debug.WriteLine($"I am a {GetType().Name}");
+            Console.WriteLine($"I am a {GetType().Name}");
             foreach (var animal in Animals)
             {
-                Debug.WriteLine($"I poked my animal {animal.GetType().Name}.");
+                Console.WriteLine($"I poked my animal {animal.GetType().Name}.");
                 animal.MakeSound();
             }
         }

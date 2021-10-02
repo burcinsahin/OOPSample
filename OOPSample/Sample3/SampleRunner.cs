@@ -1,4 +1,4 @@
-﻿using System.Diagnostics;
+﻿using System;
 
 namespace OOPSample.Sample3
 {
@@ -24,14 +24,14 @@ namespace OOPSample.Sample3
             var subMatrix = matrix1 - matrix2;
             var mulMatrix1 = 0.5 * matrix1;
 
-            Debug.WriteLine("Added matrix:");
-            Debug.WriteLine(addMatrix.ToString());
+            Console.WriteLine("Added matrix:");
+            Console.WriteLine(addMatrix.ToString());
 
-            Debug.WriteLine("Subtracted matrix:");
-            Debug.WriteLine(subMatrix.ToString());
+            Console.WriteLine("Subtracted matrix:");
+            Console.WriteLine(subMatrix.ToString());
 
-            Debug.WriteLine("Multiplied matrix by a constant:");
-            Debug.WriteLine(mulMatrix1.ToString());
+            Console.WriteLine("Multiplied matrix by a constant:");
+            Console.WriteLine(mulMatrix1.ToString());
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 
 namespace OOPSample.Sample2
 {
@@ -6,7 +7,7 @@ namespace OOPSample.Sample2
     {
         public virtual void MakeSound()
         {
-            Debug.WriteLine("Woof..");
+            Console.WriteLine("Woof..");
         }
     }
 }

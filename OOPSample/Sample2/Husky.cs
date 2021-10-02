@@ -1,4 +1,4 @@
-﻿using System.Diagnostics;
+﻿using System;
 
 namespace OOPSample.Sample2
 {
@@ -6,7 +6,7 @@ namespace OOPSample.Sample2
     {
         public override void MakeSound()
         {
-            Debug.WriteLine("Auwww");
+            Console.WriteLine("Auwww");
         }
     }
 }
