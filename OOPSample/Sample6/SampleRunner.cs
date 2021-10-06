@@ -6,25 +6,33 @@ namespace OOPSample.Sample6
     {
         public static void Run()
         {
-            Console.WriteLine("Trying linkedlist queue...");
-            var queue = new Queue<short>();
-            TryQueue(queue);
+            Console.WriteLine("Try queue?(Y/N):");
+            var v = Console.ReadLine();
+            if (v.ToLower() == "y") {
+                TryQueue(new Queue<short>());
+                TryQueue(new FixedQueue<short>(5));
+            }
 
-            Console.WriteLine("Trying fixed queue...");
-            var fixedQueue = new FixedQueue<short>(5);
-            TryQueue(fixedQueue);
+            Console.WriteLine("Try stack?(Y/N):");
+            v = Console.ReadLine();
+            if (v.ToLower() == "y")
+            {
+                TryStack(new Stack<short>());
+                TryStack(new FixedStack<short>(5));
+            }
 
-            Console.WriteLine("Trying linkedlist stack...");
-            var stack = new Stack<short>();
-            TryStack(stack);
-
-            Console.WriteLine("Trying fixed stack...");
-            var fixedStack = new FixedStack<short>(5);
-            TryStack(fixedStack);
+            Console.WriteLine("Try linkedlist?(Y/N):");
+            v = Console.ReadLine();
+            if (v.ToLower() == "y")
+            {
+                TryLinkedList(new LinkedList<short>());
+            }
         }
 
         private static void TryStack(IStack<short> stack)
         {
+            Console.WriteLine($"Trying {stack.GetType().Name}");
+
             var random = new Random();
 
             Console.WriteLine($"Display the stack: {stack}\n");
@@ -60,6 +68,8 @@ namespace OOPSample.Sample6
 
         private static void TryQueue(IQueue<short> queue)
         {
+            Console.WriteLine($"Trying {queue.GetType().Name}");
+
             var random = new Random();
 
             Console.WriteLine($"Display the queue: {queue}\n");
@@ -90,6 +100,66 @@ namespace OOPSample.Sample6
 
 
                 Console.WriteLine($"Display the queue: {queue}\n");
+            }
+        }
+
+        private static void TryLinkedList(ILinkedList<short> linkedList)
+        {
+            Console.WriteLine($"Trying {linkedList.GetType().Name}");
+
+            var random = new Random();
+
+            Console.WriteLine($"Display the queue: {linkedList}\n");
+
+            for (int i = 0; i < 100; i++)
+            {
+                var randomValue = (short)random.Next(1000);
+                Console.WriteLine($"Trying to add {randomValue} to the list.");
+                linkedList.Add(randomValue);
+                Console.WriteLine($"{randomValue} added to the list.");
+            }
+
+            for (short i = 0; i < 100; i++)
+            {
+                var op = random.Next(4); //randomly enqueue or dequeue
+                try
+                {
+                    var randomValue = (short)random.Next(1000);
+                    int randomIndex = random.Next(100);
+
+                    switch (op)
+                    {
+                        case 0://Add
+                            Console.WriteLine($"Trying to add {randomValue} to the list.");
+                            linkedList.Add(randomValue);
+                            Console.WriteLine($"{randomValue} added to the list.");
+                            break;
+                        case 1://Get
+                            Console.WriteLine($"Trying to get...");
+                            short val = linkedList.Get(random.Next(100));
+                            Console.WriteLine($"get item:{val}");
+                            break;
+                        case 2://Insert
+                            Console.WriteLine($"Trying to insert...");
+                            linkedList.Insert(randomIndex, randomValue);
+                            Console.WriteLine($"{randomValue} inserted to index:{randomIndex}.");
+                            break;
+                        case 3://Remove
+                            Console.WriteLine($"Trying to remove...");
+                            linkedList.Remove(randomIndex);
+                            Console.WriteLine($"item removed at index:{randomIndex}.");
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+
+                Console.WriteLine($"Count: {linkedList.GetCount()}\n");
+                Console.WriteLine($"Display the list: {linkedList}\n");
             }
         }
     }
