@@ -3,7 +3,6 @@
 namespace OOPSample.Sample6
 {
     internal class FixedStack<T> : IStack<T>
-        where T : struct
     {
         private readonly T[] _stack;
         private int _last;

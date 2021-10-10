@@ -2,7 +2,7 @@
 
 namespace OOPSample.Sample6
 {
-    public class Stack<T> : IStack<T> where T : struct
+    public class Stack<T> : IStack<T>
     {
         Node<T> _last;
 
