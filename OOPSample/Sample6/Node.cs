@@ -1,6 +1,6 @@
 ﻿namespace OOPSample.Sample6
 {
-    internal class Node<T> 
+    public class Node<T> 
     {
         private readonly T _value;
 

@@ -4,12 +4,21 @@ namespace OOPSample
 {
     class Program
     {
+        private const string SampleListText = @"" +
+            "Sample List: \n" +
+            "2. Polymorphism Sample\n" +
+            "3. Operator Overloading\n" +
+            "4. Multiple Inheritance&Diamond Problem\n" +
+            "5. SOLID Principles\n" +
+            "6. Data Structures\n";
         static void Main(string[] args)
         {
             try
             {
                 Console.WriteLine("Now it begins.\n");
+                Console.WriteLine(SampleListText);
                 Console.WriteLine("Type Sample No:");
+
                 string number = Console.ReadLine();
                 switch (number)
                 {
