@@ -28,6 +28,9 @@ namespace OOPSample
                     case "6":
                         Sample6.SampleRunner.Run();
                         break;
+                    case "7":
+                        Sample7.SampleRunner.Run();
+                        break;
                     default:
                         throw new NotSupportedException();
                 }

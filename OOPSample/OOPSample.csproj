@@ -92,6 +92,9 @@
     <Compile Include="Sample6\Queue.cs" />
     <Compile Include="Sample6\SampleRunner.cs" />
     <Compile Include="Sample6\Stack.cs" />
+    <Compile Include="Sample7\MethodResult.cs" />
+    <Compile Include="Sample7\MyException.cs" />
+    <Compile Include="Sample7\SampleRunner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
