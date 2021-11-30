@@ -100,7 +100,7 @@
     <Compile Include="Sample8\Instrument.cs" />
     <Compile Include="Sample8\Band.cs" />
     <Compile Include="Sample8\Drums.cs" />
-    <Compile Include="Sample8\JazzBand.cs" />
+    <Compile Include="Sample8\FlamencoBand.cs" />
     <Compile Include="Sample8\Keyboard.cs" />
     <Compile Include="Sample8\RockBand.cs" />
     <Compile Include="Sample8\SampleRunner.cs" />
