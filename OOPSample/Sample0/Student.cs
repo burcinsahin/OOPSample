@@ -6,7 +6,7 @@
 
         public Student(string name, string surname, byte age) : base(name, surname, age)
         {
-            
+
         }
     }
 }

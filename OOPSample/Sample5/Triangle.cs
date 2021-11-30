@@ -17,7 +17,7 @@ namespace OOPSample.Sample5
 
         public override double GetArea()
         {
-            var s = GetPerimeter()/2;
+            var s = GetPerimeter() / 2;
             return Math.Sqrt(s * (s - _a) * (s - _b) * (s - _c));
         }
 

@@ -6,10 +6,10 @@ namespace OOPSample.Sample5
     {
         public override void Print(IShape shape)
         {
-            File.AppendAllLines(@"./temp.txt", new[] {$"Shape:{shape.GetType().Name}, Perimeter:{shape.GetPerimeter()}, Area:{shape.GetArea()}"});
+            File.AppendAllLines(@"./temp.txt", new[] { $"Shape:{shape.GetType().Name}, Perimeter:{shape.GetPerimeter()}, Area:{shape.GetArea()}" });
             if (shape is IHasEdges shapeHasEdges)
             {
-                File.AppendAllLines(@"./temp.txt", new[] {$"Edge Count:{shapeHasEdges.GetEdgeCount()}"});
+                File.AppendAllLines(@"./temp.txt", new[] { $"Edge Count:{shapeHasEdges.GetEdgeCount()}" });
             }
         }
     }

@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace OOPSample.Sample3
 {
@@ -55,9 +52,9 @@ namespace OOPSample.Sample3
 
             var resultMatrix = new Matrix2D(new double[matrix1._rowCount, matrix1._columnCount]);
 
-            for (int i = 0; i < matrix1._rowCount; i++)
+            for (var i = 0; i < matrix1._rowCount; i++)
             {
-                for (int j = 0; j < matrix1._columnCount; j++)
+                for (var j = 0; j < matrix1._columnCount; j++)
                 {
                     resultMatrix._matrix[i, j] = matrix1._matrix[i, j] - matrix2._matrix[i, j];
                 }
@@ -81,7 +78,7 @@ namespace OOPSample.Sample3
             return resultMatrix;
         }
 
-        public static Matrix2D operator *(Matrix2D matrix1,Matrix2D matrix2)
+        public static Matrix2D operator *(Matrix2D matrix1, Matrix2D matrix2)
         {
             if (matrix1._rowCount != matrix2._columnCount || matrix1._columnCount != matrix2._rowCount)
             {

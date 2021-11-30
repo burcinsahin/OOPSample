@@ -7,7 +7,7 @@
             var nepenthes = new Nepenthes();
             nepenthes.Feed();
 
-            var plant = (IPlant) nepenthes;
+            var plant = (IPlant)nepenthes;
             plant.Feed();
 
             var carnivorous = (ICarnivorous)nepenthes;

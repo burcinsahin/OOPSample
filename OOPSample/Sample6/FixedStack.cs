@@ -32,7 +32,7 @@ namespace OOPSample.Sample6
         public override string ToString()
         {
             var str = "";
-            for (int i = _last - 1; i > -1; i--)
+            for (var i = _last - 1; i > -1; i--)
             {
                 str += $"{_stack[i]}, ";
             }

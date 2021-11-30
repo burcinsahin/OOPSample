@@ -8,9 +8,9 @@ namespace OOPSample.Sample5
         {
             var shapes = new List<IShape>
             {
-                new Rectangle(3, 5), 
-                new Square(6), 
-                new Triangle(3, 4, 5), 
+                new Rectangle(3, 5),
+                new Square(6),
+                new Triangle(3, 4, 5),
                 new Circle(10)
             };
 

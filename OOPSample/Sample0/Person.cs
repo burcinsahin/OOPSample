@@ -2,9 +2,9 @@
 {
     public abstract class Person
     {
-        private string _name;
-        private string _surname;
-        private byte _age;
+        private readonly string _name;
+        private readonly string _surname;
+        private readonly byte _age;
 
         public string Name
         {

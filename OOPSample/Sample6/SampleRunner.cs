@@ -8,7 +8,8 @@ namespace OOPSample.Sample6
         {
             Console.WriteLine("Try queue?(Y/N):");
             var v = Console.ReadLine();
-            if (v.ToLower() == "y") {
+            if (v.ToLower() == "y")
+            {
                 TryQueue(new Queue<short>());
                 TryQueue(new FixedQueue<short>(5));
             }
@@ -89,7 +90,7 @@ namespace OOPSample.Sample6
                     else
                     {
                         Console.WriteLine($"Trying to dequeue...");
-                        short val = queue.Dequeue();
+                        var val = queue.Dequeue();
                         Console.WriteLine($"Dequeued item:{val}");
                     }
                 }
@@ -111,7 +112,7 @@ namespace OOPSample.Sample6
 
             Console.WriteLine($"Display the queue: {linkedList}\n");
 
-            for (int i = 0; i < 100; i++)
+            for (var i = 0; i < 100; i++)
             {
                 var randomValue = (short)random.Next(1000);
                 Console.WriteLine($"Trying to add {randomValue} to the list.");
@@ -125,7 +126,7 @@ namespace OOPSample.Sample6
                 try
                 {
                     var randomValue = (short)random.Next(1000);
-                    int randomIndex = random.Next(100);
+                    var randomIndex = random.Next(100);
 
                     switch (op)
                     {
@@ -136,7 +137,7 @@ namespace OOPSample.Sample6
                             break;
                         case 1://Get
                             Console.WriteLine($"Trying to get...");
-                            short val = linkedList.Get(random.Next(100));
+                            var val = linkedList.Get(random.Next(100));
                             Console.WriteLine($"get item:{val}");
                             break;
                         case 2://Insert

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using System.Reflection;
 
 namespace OOPSample
 {
@@ -10,7 +12,9 @@ namespace OOPSample
             "3. Operator Overloading\n" +
             "4. Multiple Inheritance&Diamond Problem\n" +
             "5. SOLID Principles\n" +
-            "6. Data Structures\n";
+            "6. Data Structures\n" +
+            "7. Error Codes vs. Exceptions\n" +
+            "8. Design Patterns: Factory Method\n";
         static void Main(string[] args)
         {
             try
@@ -19,30 +23,16 @@ namespace OOPSample
                 Console.WriteLine(SampleListText);
                 Console.WriteLine("Type Sample No:");
 
-                string number = Console.ReadLine();
-                switch (number)
-                {
-                    case "2":
-                        Sample2.SampleRunner.Run();
-                        break;
-                    case "3":
-                        Sample3.SampleRunner.Run();
-                        break;
-                    case "4":
-                        Sample4.SampleRunner.Run();
-                        break;
-                    case "5":
-                        Sample5.SampleRunner.Run();
-                        break;
-                    case "6":
-                        Sample6.SampleRunner.Run();
-                        break;
-                    case "7":
-                        Sample7.SampleRunner.Run();
-                        break;
-                    default:
-                        throw new NotSupportedException();
-                }
+                var number = Console.ReadLine();
+                if (!byte.TryParse(number, out var n))
+                    throw new NotSupportedException();
+
+                var sampleRunner = Assembly.GetExecutingAssembly()
+                    .GetTypes()
+                    .Single(t => t.Name == "SampleRunner" &&
+                    t.Namespace.Contains($"Sample{n}"));
+
+                sampleRunner.GetMethod("Run").Invoke(sampleRunner, null);
             }
             catch (Exception ex)
             {

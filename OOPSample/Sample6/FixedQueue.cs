@@ -2,7 +2,7 @@
 
 namespace OOPSample.Sample6
 {
-    public class FixedQueue<T> : IQueue<T> 
+    public class FixedQueue<T> : IQueue<T>
     {
         private readonly T[] _queue;
         private bool _isFull;

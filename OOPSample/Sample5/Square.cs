@@ -2,7 +2,7 @@
 {
     internal class Square : Rectangle
     {
-        public Square(double a) 
+        public Square(double a)
             : base(a, a) { }
     }
 }

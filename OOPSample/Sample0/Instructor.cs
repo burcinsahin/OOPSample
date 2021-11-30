@@ -2,7 +2,7 @@
 {
     public class Instructor : Person
     {
-        private string _title;
+        private readonly string _title;
 
         public string Title
         {

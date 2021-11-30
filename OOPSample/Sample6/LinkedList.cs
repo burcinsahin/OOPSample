@@ -29,7 +29,7 @@
 
         public T Get(int index)
         {
-            Node<T> node = GetNode(index);
+            var node = GetNode(index);
 
             return node.Value;
         }
@@ -37,7 +37,7 @@
         protected Node<T> GetNode(int index)
         {
             var node = _first;
-            for (int i = 0; i < index; i++)
+            for (var i = 0; i < index; i++)
             {
                 node = node.Next;
                 if (node == null)
@@ -49,7 +49,8 @@
 
         public void Insert(int index, T item)
         {
-            if (index == 0) {
+            if (index == 0)
+            {
                 var temp = _first;
                 _first = new Node<T>(item);
                 _first.Next = temp;

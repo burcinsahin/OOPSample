@@ -2,11 +2,11 @@
 {
     public class Car
     {
-        private int velocity;
+        private readonly int velocity;
 
-        private int gear;
+        private readonly int gear;
 
-        private EngineStatus engineStatus;
+        private readonly EngineStatus engineStatus;
 
         public Car()
         {
